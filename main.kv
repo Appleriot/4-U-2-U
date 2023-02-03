@@ -1,0 +1,44 @@
+<MyScreen>:
+    container: container
+    BoxLayout:
+        orientation: 'vertical'
+
+        GridLayout:
+            id: container
+            cols: 2
+            row_force_default: True
+            row_default_height: 30
+            col_force_default: True
+            col_default_width: dp(100)
+
+            Label:
+                text: "First Name:"
+            TextInput:
+                id: first_name
+
+            Label:
+                text: "Address:"
+            TextInput:
+                id: address
+
+            Label:
+                text: "phone number:"
+            TextInput:
+                id: phone_number
+
+            Label:
+                text: "products:"
+            TextInput:
+                id: products
+
+            Label:
+                text: "date:"
+            TextInput:
+                id: date
+
+        Button:
+            text: "Save Data"
+            size_hint_y: None
+            height: '48dp'
+
+            on_release: root.save_data()
